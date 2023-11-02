@@ -1,0 +1,25 @@
+function solution(str, ending){
+  // TODO: complete
+  let getSolution = true;
+  let endinglenght = 0 - ending.length;
+
+  let strEnding = str.slice(endinglenght);
+  if(str == strEnding){
+    getSolution = false;
+  }
+  else{
+    getSolution = true;
+  }
+  return getSolution;
+  console.log(strEnding);
+}
+console.log(solution('abcde', 'cde'))
+
+const Test = require('@codewars/test-compat');
+
+describe("Tests", () => {
+  it("test", () => {
+Test.assertEquals(solution('abcde', 'cde'), true)
+Test.assertEquals(solution('abcde', 'abc'), false)
+});
+});
